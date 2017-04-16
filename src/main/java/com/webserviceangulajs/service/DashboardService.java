@@ -46,6 +46,74 @@ public class DashboardService {
     HttpServletResponse response;
 
     
+    
+    @Path("/usuarios/consumoMensal")
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getConsumoPorMes(){
+        
+        String jsonString=null;
+        
+        ConsumoVO consumo2 = new ConsumoVO();
+        
+        Cols cols1 = new Cols();
+        cols1.setId("Mes");
+        cols1.setLabel("Mes");
+        cols1.setType("string");
+        consumo2.setCols(cols1);
+        
+        Cols cols2 = new Cols();
+        cols2.setId("Quantidade Carregada");
+        cols2.setLabel("Quantidade Carregada");
+        cols2.setType("number");
+        consumo2.setCols(cols2);
+        
+        
+        try{
+
+            C coluna1 = new C();
+            coluna1.setV("07-2015");
+
+            C coluna2 = new C();
+            coluna2.setV(30);
+
+            Rows rows = new Rows();
+            rows.setC(coluna1);
+            rows.setC(coluna2);
+
+
+            consumo2.setRows(rows);
+
+            /*######*/
+
+            C coluna3 = new C();
+            coluna3.setV("08-2015");
+
+            C coluna4 = new C();
+            coluna4.setV(7);
+
+            Rows rows2 = new Rows();
+            rows2.setC(coluna3);
+            rows2.setC(coluna4);
+
+
+            consumo2.setRows(rows2);
+
+            /*######*/
+            
+            Gson gson = new Gson();
+            jsonString = gson.toJson(consumo2);
+            
+        } catch(Exception e){
+            logger.log(Level.SEVERE,"Error: {0} ", e );
+        }
+        
+        return jsonString;
+        
+    } 
+        
+    
+    
     @Path("/usuarios/consumo")
     @GET
     @Produces(MediaType.TEXT_PLAIN)
@@ -124,74 +192,6 @@ public class DashboardService {
         return jsonString;
         
     }
-    
-    
-    
-    @Path("/usuarios/consumoMensal")
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String getConsumoPorMes(){
-        
-        String jsonString=null;
-        
-        ConsumoVO consumo2 = new ConsumoVO();
-        
-        Cols cols1 = new Cols();
-        cols1.setId("Mes");
-        cols1.setLabel("Mes");
-        cols1.setType("string");
-        consumo2.setCols(cols1);
-        
-        Cols cols2 = new Cols();
-        cols2.setId("Quantidade Carregada");
-        cols2.setLabel("Quantidade Carregada");
-        cols2.setType("number");
-        consumo2.setCols(cols2);
-        
-        
-        try{
-
-            C coluna1 = new C();
-            coluna1.setV("07-2015");
-
-            C coluna2 = new C();
-            coluna2.setV(30);
-
-            Rows rows = new Rows();
-            rows.setC(coluna1);
-            rows.setC(coluna2);
-
-
-            consumo2.setRows(rows);
-
-            /*######*/
-
-            C coluna3 = new C();
-            coluna3.setV("08-2015");
-
-            C coluna4 = new C();
-            coluna4.setV(7);
-
-            Rows rows2 = new Rows();
-            rows2.setC(coluna3);
-            rows2.setC(coluna4);
-
-
-            consumo2.setRows(rows2);
-
-            /*######*/
-            
-            Gson gson = new Gson();
-            jsonString = gson.toJson(consumo2);
-            
-            
-        } catch(Exception e){
-            logger.log(Level.SEVERE,"Error: {0} ", e );
-        }
-        
-        return jsonString;
-        
-    } 
     
     
     @Path("/usuarios/auditoriaRecorrente")
