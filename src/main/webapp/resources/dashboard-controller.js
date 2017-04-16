@@ -19,6 +19,47 @@ app.controller('dashboardController',function($scope, $http){
 
         /***************************************************
          *                                
+         * Grafico de Consumo Por Mes
+         ***************************************************/
+
+
+        $scope.getConsumoPorMes = function(){
+
+            $http.get('./rest/dashboard/usuarios/consumoMensal')
+            .success(function(data){
+                    console.log('Buscando consumo de usuarios no banco ');
+                    dadosDeConsumoPorMes = data;
+                    $scope.carregaGraficoConsumoPorMes();
+            }).error(function(data){
+                    console.log('Erro no Servidor' + data);
+            });
+            
+        };
+    
+        $scope.carregaGraficoConsumoPorMes = function(){
+            
+            
+            var data = new  google.visualization.DataTable(
+                dadosDeConsumoPorMes
+            );
+            
+            var options = {
+              hAxis: {title: 'Mês',  titleTextStyle: {color: '#333'}},
+              vAxis: {minValue: 0},
+              legend: {position: 'none'}
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('chartPerMonth'));
+            chart.draw(data, options);
+            
+        };
+        
+        
+        $scope.getConsumoPorMes();
+        
+
+        /***************************************************
+         *                                
          * Grafico de Consumo Por Usuario
          ***************************************************/
 
@@ -64,46 +105,6 @@ app.controller('dashboardController',function($scope, $http){
         $scope.getConsumoPorUsuario();
 
 
-        /***************************************************
-         *                                
-         * Grafico de Consumo Por Mes
-         ***************************************************/
-
-
-        $scope.getConsumoPorMes = function(){
-
-            $http.get('./rest/dashboard/usuarios/consumoMensal')
-            .success(function(data){
-                    console.log('Buscando consumo de usuarios no banco ');
-                    dadosDeConsumoPorMes = data;
-                    $scope.carregaGraficoConsumoPorMes();
-            }).error(function(data){
-                    console.log('Erro no Servidor' + data);
-            });
-            
-        };
-    
-        $scope.carregaGraficoConsumoPorMes = function(){
-            
-            
-            var data = new  google.visualization.DataTable(
-                dadosDeConsumoPorMes
-            );
-            
-            var options = {
-              hAxis: {title: 'Mês',  titleTextStyle: {color: '#333'}},
-              vAxis: {minValue: 0},
-              legend: {position: 'none'}
-            };
-
-            var chart = new google.visualization.AreaChart(document.getElementById('chartPerMonth'));
-            chart.draw(data, options);
-            
-        };
-        
-        
-        $scope.getConsumoPorMes();
-        
 
         /***************************************************
          *                                

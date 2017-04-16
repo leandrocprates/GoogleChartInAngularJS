@@ -28,6 +28,10 @@ import javax.ws.rs.core.MediaType;
 /**
  * REST Web Service
  *
+ * Exemplos : http://www.vogella.com/tutorials/REST/article.html 
+ *            http://www.ciceroednilson.com.br/java-criando-um-web-service-rest-com-jersey-e-jpa/
+ * 
+ * 
  * @author acer k
  */
 @Path("dashboard")
