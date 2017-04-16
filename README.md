@@ -7,7 +7,7 @@ No pacote **com.webserviceangulajs.service** a Classe **DashboardService.java** 
 
 A pagina **dashboard.html** voce poderá vizualizar 3 tipos de graficos que poderão ser criados como mostrado na figura abaixo: 
 
-[Contribution guidelines for this project](image/grafico_1.png)
 
-![GitHub Logo](image/grafico_1.png)
+![GitHub Grafico 1](image/grafico_1.png)
 
+![GitHub Grafico 1](image/grafico_2.png)
