@@ -8,3 +8,4 @@ No pacote **com.webserviceangulajs.service** a Classe **DashboardService.java** 
 A pagina **dashboard.html** voce poderá vizualizar 3 tipos de graficos que poderão ser criados como mostrado na figura abaixo: 
 
 
+(image/grafico_1.png)
