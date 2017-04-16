@@ -5,4 +5,6 @@ Este Projeto tem por Objectivo mostrar a utilizacao de Graficos Do Google Api UR
 
 No pacote **com.webserviceangulajs.service** a Classe **DashboardService.java** descreve os serviços que serão chamados pela controller **dashboard-controller.js** . 
 
-A pagina dashboard.html voce poderá vizualizar 3 tipos de graficos que poderão ser criados. 
+A pagina **dashboard.html** voce poderá vizualizar 3 tipos de graficos que poderão ser criados como mostrado na figura abaixo: 
+
+
