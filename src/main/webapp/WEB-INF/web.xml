@@ -10,6 +10,7 @@
 		<servlet-class>
                      com.sun.jersey.spi.container.servlet.ServletContainer
                 </servlet-class>
+                <!-- Define a localizacao das classes com os serviços para Jersey --> 
 		<init-param>
 		     <param-name>com.sun.jersey.config.property.packages</param-name>
 		     <param-value>com.webserviceangulajs.service</param-value>
@@ -23,6 +24,7 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>    
 
+        <!-- Define a localizacao dos servicos abaixo da URL /rest/   -->
         <servlet-mapping>
             <servlet-name>jersey-serlvet</servlet-name>
             <url-pattern>/rest/*</url-pattern>
