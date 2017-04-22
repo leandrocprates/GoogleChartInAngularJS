@@ -1,6 +1,6 @@
 # GoogleChartInAngularJS
 
-Este Projeto tem por Objectivo mostrar a utilizacao de Graficos Do Google Api URL https://developers.google.com/chart/ 
+Este Projeto tem por Objectivo mostrar a utilizacao de Graficos Do Google Api URL https://developers.google.com/chart/ junto com o AngularJs.
 
 No pacote **com.webservice.graficos** estão disponiveis as classes necessarias que serao necessarias para criar o JSON de Retorno para o Controller do Angular renderizar os graficos do Google. 
 
