@@ -27,7 +27,8 @@ app.controller('dashboardController',function($scope, $http){
 
             $http.get('./rest/dashboard/usuarios/consumoMensal')
             .success(function(data){
-                    console.log('Buscando consumo de usuarios no banco ');
+                    console.log('Consumo Mensal Json : ');
+                    console.log(data)
                     dadosDeConsumoPorMes = data;
                     $scope.carregaGraficoConsumoPorMes();
             }).error(function(data){
@@ -49,6 +50,8 @@ app.controller('dashboardController',function($scope, $http){
               legend: {position: 'none'}
             };
 
+            //instancia o grafico e substitui a div "chartPerMonth" presente em dashboard.html 
+            //pelo grafico 
             var chart = new google.visualization.AreaChart(document.getElementById('chartPerMonth'));
             chart.draw(data, options);
             
@@ -67,7 +70,8 @@ app.controller('dashboardController',function($scope, $http){
 
             $http.get('./rest/dashboard/usuarios/consumo')
             .success(function(data){
-                    console.log('Buscando consumo de usuarios no banco ');
+                    console.log('Consumo Por Usuario Json : ');
+                    console.log(data);
                     dadosDeConsumoPorUsuario = data;
                     $scope.carregaGraficoDeConsumoPorUsuario();
             }).error(function(data){
@@ -116,7 +120,8 @@ app.controller('dashboardController',function($scope, $http){
 
             $http.get('./rest/dashboard/usuarios/auditoriaRecorrente')
             .success(function(data){
-                    console.log('Buscando auditorias no banco ');
+                    console.log('Auditoria Recorrente Json : ');
+                    console.log(data);
                     dadosAuditoriaRecorrente = data;
                     $scope.carregaGraficoAuditoriasMaisRecorrentes();
             }).error(function(data){
