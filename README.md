@@ -64,3 +64,69 @@ O grafico **Consumo por Mês** é representado pelo Json abaixo retornado do ser
 }
 
 ```
+
+
+
+O grafico **Consumo por Usuarios** é representado pelo seguinte Json abaixo : 
+
+```javascript 
+{
+   "cols":
+   [
+      {
+         "id":"Nome",
+         "label":"Nome",
+         "type":"string",
+         "p":{
+
+         }
+      },
+      {
+         "id":"Contador",
+         "label":"Contador",
+         "type":"number",
+         "p":{
+
+         }
+      },
+      {
+         "type":"string",
+         "p":{
+            "role":"style"
+         }
+      }
+   ],
+   "rows":
+   [
+      {
+         "c":[
+            {
+               "v":"Leandro"
+            },
+            {
+               "v":5
+            },
+            {
+               "v":"#b87333"
+            }
+         ]
+      },
+      {
+         "c":[
+            {
+               "v":"Matui"
+            },
+            {
+               "v":15
+            },
+            {
+               "v":"silver"
+            }
+         ]
+      }
+   ]
+}
+
+```
+
+
