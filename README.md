@@ -12,3 +12,55 @@ A pagina **dashboard.html** voce poderá vizualizar 3 tipos de graficos que pode
 ![GitHub Grafico 1](image/grafico_1.png)
 
 ![GitHub Grafico 1](image/grafico_2.png)
+
+
+O grafico **Consumo por Mês** é representado pelo Json abaixo retornado do servidor. 
+
+```javascript 
+
+{
+   "cols":
+   [
+      {
+         "id":"Mes",
+         "label":"Mes",
+         "type":"string",
+         "p":{
+
+         }
+      },
+      {
+         "id":"Quantidade Carregada",
+         "label":"Quantidade Carregada",
+         "type":"number",
+         "p":{
+
+         }
+      }
+   ],
+   "rows":
+   [
+      {
+         "c":[
+            {
+               "v":"07-2015"
+            },
+            {
+               "v":30
+            }
+         ]
+      },
+      {
+         "c":[
+            {
+               "v":"08-2015"
+            },
+            {
+               "v":7
+            }
+         ]
+      }
+   ]
+}
+
+```
