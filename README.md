@@ -194,7 +194,8 @@ tipo de dado que será devolvido e o style. Como no modelo abaixo , define "labe
 
 ```javascrit 
 {
-   "cols":[
+   "cols":
+   [
       {
          "id":"Nome",
          "label":"Nome",
