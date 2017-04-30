@@ -193,26 +193,26 @@ Os dados no Google Chart sao armazenados em tabelas. A tags "cols" é um array d
 tipo de dado que será devolvido e o style. Como no modelo abaixo , define "label" como "Nome" , tipo de retorno string e a tag role que define o style que representa a cor do grafico. 
 
 ```javascrit 
+{
+   "cols":[
+      {
+         "id":"Nome",
+         "label":"Nome",
+         "type":"string",
+         "p":{
+            "role":"style"
+         }
+      },
+      {
+         "id":"Contador",
+         "label":"Contador",
+         "type":"number",
+         "p":{
 
-"cols":[
-   {
-      "id":"Nome",
-      "label":"Nome",
-      "type":"string",
-      "p":{
-         "role":"style"
+         }
       }
-   },
-   {
-      "id":"Contador",
-      "label":"Contador",
-      "type":"number",
-      "p":{
-
-      }
-   }
-]
-
+   ]
+}
 ```
 
 
