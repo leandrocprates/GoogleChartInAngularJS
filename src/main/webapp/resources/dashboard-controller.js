@@ -2,6 +2,7 @@
  *DashBoard Controller 
  */
 
+//carrega pacote de graficos 
 google.load('visualization', '1', {
     packages: ['corechart', 'bar']
 });
