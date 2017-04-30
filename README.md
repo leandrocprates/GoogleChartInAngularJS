@@ -189,9 +189,8 @@ O grafico **Auditorias mais Recorrentes** é representado pelo seguinte Json aba
 # Descrição retorno de dados Google Chart 
 
 
-Os dados no Google Chart sao armazenados em tabelas. A tags "cols" é onde serão colocados o label , tipo de dado
-que será devolvido. Como no modelo abaixo , define "label" como "Nome" , tipo de retorno string e a tag role que define o 
-style que representa a cor do grafico. 
+Os dados no Google Chart sao armazenados em tabelas. A tags "cols" é um array de colunas onde cada coluna serão colocados o label , 
+tipo de dado que será devolvido e o style. Como no modelo abaixo , define "label" como "Nome" , tipo de retorno string e a tag role que define o style que representa a cor do grafico. 
 
 ```javascrit 
 
@@ -203,8 +202,25 @@ style que representa a cor do grafico.
       "p":{
          "role":"style"
       }
+   },
+   {
+      "id":"Contador",
+      "label":"Contador",
+      "type":"number",
+      "p":{
+
+      }
    }
 ]
 
 ```
+
+
+
+
+
+
+
+
+
 
