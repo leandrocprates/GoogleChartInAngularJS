@@ -130,3 +130,56 @@ O grafico **Consumo por Usuarios** é representado pelo seguinte Json abaixo :
 ```
 
 
+
+O grafico **Auditorias mais Recorrentes** é representado pelo seguinte Json abaixo : 
+
+```javascript 
+
+{
+   "cols":
+   [
+      {
+         "id":"Auditoria",
+         "label":"Auditoria",
+         "type":"string",
+         "p":{
+
+         }
+      },
+      {
+         "id":"Quantidade Carregada",
+         "label":"Quantidade Carregada",
+         "type":"number",
+         "p":{
+
+         }
+      }
+   ],
+   "rows":
+   [
+      {
+         "c":[
+            {
+               "v":"NCM ERRADA"
+            },
+            {
+               "v":5
+            }
+         ]
+      },
+      {
+         "c":[
+            {
+               "v":"CNPJ INVALIDO"
+            },
+            {
+               "v":38
+            }
+         ]
+      }
+   ]
+}
+
+``` 
+
+
