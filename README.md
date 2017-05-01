@@ -223,7 +223,42 @@ tipo de dado que será devolvido e o style. Como no modelo abaixo , define "labe
 ```
 
 
+A tag "rows" é um array de células onde serão descritos os valores renderizados pelo gráfico: 
 
+
+```javascript 
+
+   "rows":
+   [
+      {
+         "c":[
+            {
+               "v":"Leandro"
+            },
+            {
+               "v":5
+            },
+            {
+               "v":"#b87333"
+            }
+         ]
+      },
+      {
+         "c":[
+            {
+               "v":"Matui"
+            },
+            {
+               "v":15
+            },
+            {
+               "v":"silver"
+            }
+         ]
+      }
+   ]
+
+``` 
 
 
 
