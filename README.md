@@ -201,7 +201,7 @@ tipo de dado que será devolvido e o style. Como no modelo abaixo , define "labe
          "label":"Nome",
          "type":"string",
          "p":{
-            "role":"style"
+            
          }
       },
       {
@@ -211,7 +211,13 @@ tipo de dado que será devolvido e o style. Como no modelo abaixo , define "labe
          "p":{
 
          }
-      }
+      },
+      {
+         "type":"string",
+         "p":{
+            "role":"style"
+         }
+      }      
    ]
 }
 ```
