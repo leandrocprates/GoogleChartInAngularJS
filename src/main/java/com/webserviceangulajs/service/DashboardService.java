@@ -32,6 +32,11 @@ import javax.ws.rs.core.MediaType;
  *            http://www.ciceroednilson.com.br/java-criando-um-web-service-rest-com-jersey-e-jpa/
  * 
  * 
+ * Documentacao google chart api : 
+ * 
+ *              https://developers.google.com/chart/interactive/docs/datatables_dataviews
+ *              
+ * 
  * @author acer k
  */
 @Path("dashboard")
